@@ -1,0 +1,16 @@
+{
+  "name": "image-tagging-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.395.0",
+    "serverless": "^1.36.3",
+    "sls": "^0.1.0"
+  }
+}

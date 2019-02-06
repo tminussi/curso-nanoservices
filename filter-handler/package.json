@@ -1,0 +1,17 @@
+{
+  "name": "filter-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.395.0"
+  },
+  "dependencies": {
+    "jimp": "^0.6.0"
+  }
+}
