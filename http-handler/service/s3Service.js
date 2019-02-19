@@ -10,13 +10,17 @@ const s3 = new AWS.S3();
 
 const BUCKET = 'nanoservices-imagens'
 
+
 const upload = body => {
+
+    const base64String = body.replace(/^data:image\/\w+;base64,/, "");
+    const buffer = new Buffer(base64String, 'base64');
     const id = uuid();
     return new Promise((res, rej) => {
         s3.putObject({
             Bucket: BUCKET,
             Key: id + '.jpg',
-            Body: new Buffer(body.replace(/^data:image\/\w+;base64,/, ""),'base64'),
+            Body: buffer,
             ContentEncoding: 'base64',
             ContentType: 'image/jpeg'
         }, (err) => {
@@ -29,7 +33,7 @@ const upload = body => {
             });
         });
     });
-    
+
 }
 
 module.exports = {
